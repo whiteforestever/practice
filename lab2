@@ -1,27 +1,32 @@
-class A {
-    int k;
-    public A(int k){
-        this.k = k;
+class Turtle{
+    int weight;
+    public Turtle(){
+        weight = 0;
+    }
+    public Turtle(int weight){
+        this.weight = 1000*weight;
     }
 }
     
-class B extends A {
+class SeaTurtle extends Turtle {
     int c;
-    public B(int c){
-        this.c=c;
+
+    public SeaTurtle(int c, int weight){
+        super(weight);
+        this.c = super.weight - c;
     }
     public void doSmth(){
         System.out.println("done");
     }
-}
-    
     public static void main(String[] args){
-    A a = new A(1);
-    A b = new B(2);
-    B c = new B(3);
-    B d = new A(4);
+    
+    var ivan = new SeaTurtle(100, 15);
+    Turtle a = new Turtle(10);
+    Turtle b = new SeaTurtle(20, 5);
+    SeaTurtle c = new SeaTurtle(30, 7);
+    SeaTurtle d = new SeaTurtle(40, 11); 
     
     c.doSmth();
-    a.doSmth();
+    d.doSmth();
     }
-    
+}
