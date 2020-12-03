@@ -1,0 +1,27 @@
+class A {
+    int k;
+    public A(int k){
+        this.k = k;
+    }
+}
+    
+class B extends A {
+    int c;
+    public B(int c){
+        this.c=c;
+    }
+    public void doSmth(){
+        System.out.println("done");
+    }
+}
+    
+    public static void main(String[] args){
+    A a = new A(1);
+    A b = new B(2);
+    B c = new B(3);
+    B d = new A(4);
+    
+    c.doSmth();
+    a.doSmth();
+    }
+    
