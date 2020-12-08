@@ -1,9 +1,9 @@
 def chet_nechet_list(d: list) -> list:
-    res = []
+    chet = []
     nechet = []
     for x in d:
         if (x % 2 == 0):
-            res.append(x)
+            chet.append(x)
         else:
             nechet.append(x)
     return res+nechet
