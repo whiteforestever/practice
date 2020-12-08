@@ -1,0 +1,12 @@
+def chet_nechet_list(d: list) -> list:
+    res = []
+    nechet = []
+    for x in d:
+        if (x % 2 == 0):
+            res.append(x)
+        else:
+            nechet.append(x)
+    return res+nechet
+
+a = [1, 4, 8, 7, 124, 13, 11, 8]
+print(chet_nechet_list(a))
